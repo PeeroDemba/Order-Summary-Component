@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(./images/pattern-background-desktop.svg);
+  background-position: center -6.25;
+  background-size: contain;
+  background-repeat: repeat-x;
+  position: relative;
+  background-color: hsl(225, 100%, 94%);
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+main.container {
+  max-width: 21rem;
+  min-height: 22rem;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+  border-radius: 1rem;
+  text-align: center;
+
+  &>.image {
+    img {
+      max-width: 21rem;
+      border-top-left-radius: 1rem;
+      border-top-right-radius: 1rem;
+    }
+  }
+
+  &>.text {
+    max-width: 21rem;
+    padding: 1.3rem;
+
+    & h2 {
+      margin-bottom: 1rem;
+    }
+
+    &>p {
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+
+    & .price {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.6rem 1.3rem;
+      margin-bottom: 1.3rem;
+      border-radius: 0.6rem;
+      background-color: hsl(225, 45%, 83%);
+
+
+      & img {
+        width: 2.6rem;
+        height: 2.6rem;
+      }
+
+      & .order p {
+        margin-right: 1.8rem;
+
+
+        &:first-child {
+          font-weight: 700;
+          margin-bottom: 0.4rem;
+        }
+      }
+
+      & a {
+        color: hsl(245, 75%, 52%);
+
+        &:hover {
+          color: hsl(224, 23%, 55%);
+          text-decoration: none;
+        }
+      }
+    }
+
+    & a.btn {
+      display: block;
+      padding: 0.6rem 1.3rem;
+      border-radius: 0.6rem;
+      text-decoration: none;
+      margin-bottom: 1rem;
+      color: white;
+      background-color: hsl(245, 75%, 52%);
+
+      &:hover {
+        background-color: hsl(224, 23%, 55%);
+      }
+    }
+
+    & a.cancel {
+      text-decoration: none;
+      color: hsl(224, 23%, 55%);
+
+      &:hover {
+        color: hsl(223, 47%, 23%);
+      }
+    }
+  }
+
+  &~footer.attribution {
+    font-size: 0.6rem;
+    text-align: center;
+
+    a {
+      color: hsl(228, 45%, 44%);
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  body {
+    background-image: url(./images/pattern-background-mobile.svg);
+    background-position: center 0;
+  }
+}

@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(./images/pattern-background-desktop.svg);
+  background-position: center -6.25;
+  background-size: contain;
+  background-repeat: repeat-x;
+  position: relative;
+  background-color: hsl(225deg, 100%, 94%);
+  font-family: "Red Hat Display", sans-serif;
+}
+
+main.container {
+  max-width: 21rem;
+  min-height: 22rem;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+  border-radius: 1rem;
+  text-align: center;
+}
+main.container > .image img {
+  max-width: 21rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+main.container > .text {
+  max-width: 21rem;
+  padding: 1.3rem;
+}
+main.container > .text h2 {
+  margin-bottom: 1rem;
+}
+main.container > .text > p {
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+main.container > .text .price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 1.3rem;
+  margin-bottom: 1.3rem;
+  border-radius: 0.6rem;
+  background-color: hsl(225deg, 45%, 83%);
+}
+main.container > .text .price img {
+  width: 2.6rem;
+  height: 2.6rem;
+}
+main.container > .text .price .order p {
+  margin-right: 1.8rem;
+}
+main.container > .text .price .order p:first-child {
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+main.container > .text .price a {
+  color: hsl(245deg, 75%, 52%);
+}
+main.container > .text .price a:hover {
+  color: hsl(224deg, 23%, 55%);
+  text-decoration: none;
+}
+main.container > .text a.btn {
+  display: block;
+  padding: 0.6rem 1.3rem;
+  border-radius: 0.6rem;
+  text-decoration: none;
+  margin-bottom: 1rem;
+  color: white;
+  background-color: hsl(245deg, 75%, 52%);
+}
+main.container > .text a.btn:hover {
+  background-color: hsl(224deg, 23%, 55%);
+}
+main.container > .text a.cancel {
+  text-decoration: none;
+  color: hsl(224deg, 23%, 55%);
+}
+main.container > .text a.cancel:hover {
+  color: hsl(223deg, 47%, 23%);
+}
+main.container ~ footer.attribution {
+  font-size: 0.6rem;
+  text-align: center;
+}
+main.container ~ footer.attribution a {
+  color: hsl(228deg, 45%, 44%);
+}
+
+@media (max-width: 500px) {
+  body {
+    background-image: url(./images/pattern-background-mobile.svg);
+    background-position: center 0;
+  }
+}
